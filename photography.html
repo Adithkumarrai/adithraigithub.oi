@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Photography</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #072f6b;
+            color: #e9e6e6;
+        }
+
+        header {
+            background-color: #1051a5;
+            padding: 15px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            margin-left: 50px;
+        }
+
+        nav a {
+            color: #e9e6e6;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ffffff;
+            color: #1051a5;
+            border-radius: 5px;
+        }
+
+        .menu-toggle i {
+            font-size: 25px;
+            color: #ffffff;
+            cursor: pointer;
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu-toggle i {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                background-color: #1051a5;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                padding: 10px;
+                border-radius: 5px;
+                width: 100%;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                margin: 5px 0;
+                text-align: center;
+            }
+        }
+
+        .photography-section {
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .photography-section h1 {
+            color: #ffcc00;
+            margin-bottom: 20px;
+        }
+
+        .photo-container {
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .photo-scroll {
+            display: flex;
+            animation: scrollRight 20s linear infinite;
+        }
+
+        .photo-scroll img {
+            width: 200px;
+            height: 300px;
+            border-radius: 10px;
+            border: 4px solid #c9d15c;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-scroll img:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes scrollRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.photo-scroll {
+    display: flex;
+    animation: scrollRight 20s linear infinite;
+}
+
+@keyframes scrollRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Scroll only half the width for seamless looping */
+    }
+}
+
+
+        .quote-container {
+            margin-top: 30px;
+            font-size: 1.5em;
+            font-weight: bold;
+            animation: fadeColorChange 4s infinite;
+        }
+        .quote-paragraph {
+    margin-top: 15px;
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #f0f0f0;
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+        @keyframes fadeColorChange {
+            0% {
+                opacity: 0;
+                color: #ffcc00;
+            }
+
+            25% {
+                opacity: 1;
+                color: #ff5733;
+            }
+
+            50% {
+                opacity: 1;
+                color: #33ff57;
+            }
+
+            75% {
+                opacity: 1;
+                color: #3385ff;
+            }
+
+            100% {
+                opacity: 0;
+                color: #ffcc00;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header with Navigation Bar -->
+    <header>
+        <a href="#" class="logo">Myself</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Family.html">Family</a>
+            <a href="edu.html">Education</a>
+            <a href="Exp.html">Experience</a>
+            <a href="contact.html">Contact</a>
+            <a href="more.html">More</a>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <!-- Photography Section -->
+    <section class="photography-section">
+        <h1>My Photography Adventures</h1>
+        <div class="photo-container">
+            <div class="photo-scroll">
+                <img src="Image/sky.jpg" alt="Photography 1">
+                <img src="Image/stone..jpg" alt="Photography 2">
+                <img src="Image/photo.stone.jpg" alt="Photography 3">
+                <img src="Image/dog..jpg" alt="Photography 4">
+                <img src="Image/journey.photo.jpg" alt="Photography 5">
+                <!-- Duplicate images for seamless loop -->
+                <img src="Image/sky.jpg" alt="Photography 1">
+                <img src="Image/stone..jpg" alt="Photography 2">
+                <img src="Image/photo.stone.jpg" alt="Photography 3">
+                <img src="Image/class dinner.jpg" alt="Photography 4">
+                <img src="Image/journey.photo.jpg" alt="Photography 5">
+            </div>
+            
+        </div>
+        <div class="quote-container">
+            "Capture the moments, relive the memories."
+        </div>
+        <p class="quote-paragraph">
+            Photography allows us to freeze fleeting moments and turn them into timeless memories. Each shot has a story to tell, capturing emotions, beauty, and the essence of life in a single frame.
+        </p>
+        
+    </section>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('header nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Rotating Quotes
+        const quotes = [
+            "Capture the moments, relive the memories.",
+            "A photograph is the pause button of life.",
+            "Every photo tells a unique story.",
+            "Through the lens, I find my world.",
+            "Life is better when framed perfectly."
+        ];
+       
+        let quoteIndex = 0;
+        const quoteContainer = document.querySelector('.quote-container');
+
+        setInterval(() => {
+            quoteIndex = (quoteIndex + 1) % quotes.length;
+            quoteContainer.textContent = quotes[quoteIndex];
+        }, 4000);
+    </script>
+</body>

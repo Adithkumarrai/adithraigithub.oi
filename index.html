@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Portfolio Website</title>
+    <style>
+        /* Medium-sized responsive menu icon */
+        .menu-toggle i {
+            font-size: 25px; /* Medium size for the menu icon */
+            color: #ffffff; /* Adjust color if needed */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Myself</a>
+
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="Family.html">Family</a>
+            <a href="edu.html">Education</a>
+            <a href="Exp.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="Image/adith.jpg" alt="Adith Kumar Rai">
+        </div>
+        <div class="home-content">
+            <h1>Hi, Myself <span>Adith Kumar Rai</span></h1>
+            <h3 class="typing-text">I'm a Sherubtse University student. <span></span></h3>
+            <p>Welcome to my site!</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/?_rdr"><i class="fab fa-facebook"></i></a>
+                <a href="https://t.me/Lhorung"><i class="fab fa-telegram"></i></a>
+                <a href=" https://wa.me/qr/AJYRHXVN7QA6D1 "><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <a href="more.html" class="btn">Know more about me</a>
+        </div>
+    </section>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('header nav');
+        
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <!-- Bootstrap CSS and JavaScript Links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #0a2d4d;
+            color: #e9e6e6;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1051a5;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header nav a {
+            color: #e9e6e6;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        header nav a:hover,
+        header nav .active {
+            color: #ffeb3b;
+        }
+
+        .contact-section {
+            padding: 80px 15px;
+        }
+
+        .contact-section h2 {
+            color: #ffeb3b;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        .contact-card {
+            background-color: #0d4871;
+            color: #ffffff;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.2s;
+        }
+
+        .contact-card:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-card-body {
+            padding: 25px;
+        }
+
+        .contact-card .card-title {
+            color: #ffeb3b;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .btn-submit {
+            background-color: #ffeb3b;
+            color: #080808;
+            border: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #ffca28;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #093853;
+            color: #ffffff;
+            font-size: 0.9em;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header class="d-flex justify-content-between align-items-center">
+    <a href="index.html" class="logo">Myself</a>
+    <nav class="d-flex">
+        <a href="index.html">Home</a>
+        <a href="Family.html">Family</a>
+        <a href="edu.html">Education</a>
+        <a href="Exp.html">Experience</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</header>
+
+<!-- Contact Section -->
+<main class="contact-section container mt-5 pt-5">
+    <h2 class="text-center">Contact Me</h2>
+    <div class="row">
+        <!-- Contact Form Card -->
+        <div class="col-md-8 mx-auto">
+            <div class="contact-card">
+                <div class="card-body">
+                    <h5 class="card-title">Get in Touch</h5>
+                    <p class="card-text">I would love to hear from you! Feel free to reach out with any questions, suggestions, or opportunities. You can use the form below to send me a message.</p>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>Thank you for visiting my website. I'm excited to connect!</p>
+</footer>
+
+<!-- JavaScript for Form Submission -->
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        // Simulate a loading state
+        const submitButton = document.querySelector('.btn-submit');
+        submitButton.textContent = 'Submitting...';
+        submitButton.disabled = true;
+
+        // Simulate a server call and redirect
+        setTimeout(() => {
+            alert('Form submitted successfully!');
+            window.location.href = 'submit.php'; // Redirect to submit.php
+        }, 2000);
+    });
+</script>
+
+</body>
+</html>

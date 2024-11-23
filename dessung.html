@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Myself</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #e9e6e6;
+            margin: 0;
+            padding: 0;
+            background-color: #072f6b;
+        }
+
+        header {
+            background-color: #1051a5;
+            padding: 15px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #e9e6e6;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ffffff;
+            color: #1051a5;
+            border-radius: 5px;
+        }
+
+        .menu-toggle i {
+            font-size: 25px;
+            color: #ffffff;
+            cursor: pointer;
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu-toggle i {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                background-color: #1051a5;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                padding: 10px;
+                border-radius: 5px;
+                width: 100%;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                margin: 5px 0;
+                text-align: center;
+            }
+        }
+
+        section {
+            margin-top: 100px;
+            padding: 40px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffcc00;
+            margin-bottom: 30px;
+        }
+
+        .dessung-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #0d3d73, #0a5399);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .dessung-frame {
+            width: 45%;
+            height: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 4px solid #c9d15c;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .dessung-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dessung-description {
+            width: 50%;
+            text-align: left;
+            color: #f0f0f0;
+            margin-left: 20px;
+        }
+
+        .dessung-description h3 {
+            font-size: 1.8em;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .dessung-description p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        @media screen and (max-width: 768px) {
+            .dessung-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .dessung-frame {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+
+            .dessung-description {
+                width: 80%;
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Myself</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Family.html">Family</a>
+            <a href="edu.html">Education</a>
+            <a href="Exp.html">Experience</a>
+            <a href="contact.html">Contact</a>
+            <a href="more.html">More</a>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Dessung Program</h2>
+
+            <div class="dessung-item">
+                <div class="dessung-frame">
+                    <img src="Image/Dessung.info.png" alt="Dessung Program">
+                </div>
+                <div class="dessung-description">
+                    <h3>Empowering Future Leaders</h3>
+                    <p>
+                        Dessung, founded by His Majesty Jigme Khesar Namgyel Wangchuck, is a program dedicated to fostering strong future leaders for the service of the nation. I am proud to be a part of His Majesty's Kidu, trained in Tendruk (Wing 1) under the guidance of the Army.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('header nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

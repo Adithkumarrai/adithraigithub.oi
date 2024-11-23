@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Experience</title>
+    <!-- Bootstrap CSS and JavaScript Links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #0a2d4d;
+            color: #e9e6e6;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #1051a5;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        header nav a {
+            color: #e9e6e6;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        header nav a:hover,
+        header nav .active {
+            color: #ffeb3b;
+        }
+
+        /* Main content styling */
+        .experience-section {
+            padding: 80px 15px;
+        }
+
+        .experience-section h2 {
+            color: #ffeb3b;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        /* Card styling */
+        .card {
+            background-color: #0d4871;
+            color: #ffffff;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-img-top {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Button styling */
+        .btn-learn-more {
+            background-color: #ffeb3b;
+            color: #080808;
+            border: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-learn-more:hover {
+            background-color: #ffca28;
+        }
+
+        /* Footer styling */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #093853;
+            color: #ffffff;
+            font-size: 0.9em;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header class="d-flex justify-content-between align-items-center">
+    <a href="index.html" class="logo">Myself</a>
+    <nav class="d-flex">
+        <a href="index.html">Home</a>
+        <a href="Family.html">Family</a>
+        <a href="edu.html">Education</a>
+        <a href="Exp.html" class="active">Experience</a>
+        <a href=""></a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- Experience Section -->
+<main class="experience-section container mt-5 pt-5">
+    <h2 class="text-center">My Professional Experience</h2>
+    <div class="row">
+        <!-- Experience Item 1 -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <img src="Image/uiux.jpeg" class="card-img-top" alt="Internship Experience">
+                <div class="card-body">
+                    <h5 class="card-title">UIUX programer</h5>
+                    <p class="card-text"> "In my UI/UX design program, I focused on creating user-centered designs that enhance accessibility and engagement. I developed wireframes, prototypes, and interactive interfaces while emphasizing usability and visual appeal. This experience equipped me with the skills to conduct user research, usability testing, and iterative design processes, ensuring each project effectively meets users' needs and expectations."</p>
+                    <a href="uiux.html" class="btn btn-learn-more">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Item 2 -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <img src="Image/data.jpeg" class="card-img-top" alt="Project Experience">
+                <div class="card-body">
+                    <h5 class="card-title">Data science and Data analytics</h5>
+                    <p class="card-text">"My background in data science and data analysis includes working with diverse datasets to extract actionable insights. I have developed skills in statistical analysis, machine learning, and data visualization, using tools like Python, R, and SQL. This experience has allowed me to create predictive models, generate data-driven solutions, and communicate findings effectively, supporting decision-making processes across various domains."</p>
+                    <a href="DSDA.html" class="btn btn-learn-more">Learn More</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Item 3 -->
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <img src="Image/social.jpeg" class="card-img-top" alt="Freelance Experience">
+                <div class="card-body">
+                    <h5 class="card-title">Social Activities</h5>
+                    <p class="card-text">"Through my participation in community outreach programs, I've worked closely with local organizations to support education, environmental awareness, and public health initiatives. Volunteering has given me a profound appreciation for collective effort and a commitment to creating a positive impact in my community."</p>
+                    <a href="Social.html" class="btn btn-learn-more">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>Thank you for exploring my professional experience. I'm excited to bring my skills to new challenges and opportunities.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>UI/UX Experience</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #e9e6e6;
+            margin: 0;
+            padding: 0;
+            background-color: #072f6b;
+        }
+
+        header {
+            background-color: #1051a5;
+            padding: 15px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #e9e6e6;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ffffff;
+            color: #1051a5;
+            border-radius: 5px;
+        }
+
+        .menu-toggle i {
+            font-size: 25px;
+            color: #ffffff;
+            cursor: pointer;
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu-toggle i {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                background-color: #1051a5;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                padding: 10px;
+                border-radius: 5px;
+                width: 100%;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                margin: 5px 0;
+                text-align: center;
+            }
+        }
+
+        .dessung-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0d3d73, #0a5399);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 40px auto 20px;
+            max-width: 900px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .dessung-frame {
+            width: 350px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 4px solid #c9d15c;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .dessung-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .dessung-frame img.active {
+            opacity: 1;
+        }
+
+        .dessung-frame .photo-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            text-align: center;
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .dessung-frame .photo-caption.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .dessung-description {
+            max-width: 500px;
+            text-align: center;
+            color: #f0f0f0;
+            margin: 0 10px;
+        }
+
+        .dessung-description h3 {
+            font-size: 1.8em;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .dessung-description p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffcc00;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .dessung-item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .dessung-frame {
+                width: 90%;
+                height: auto;
+                border: 3px solid #c9d15c;
+            }
+
+            .dessung-description {
+                max-width: 90%;
+            }
+
+            .dessung-description h3 {
+                font-size: 1.5em;
+            }
+
+            .dessung-description p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Myself</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Family.html">Family</a>
+            <a href="edu.html">Education</a>
+            <a href="Exp.html">Experience</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>UI/UX</h2>
+
+            <div class="dessung-item">
+                <div class="dessung-frame">
+                    <img src="Image/uiux group.jpg" alt="UI/UX 1" class="active">
+                    <img src="Image/uiux madam.png" alt="UI/UX 2">
+                    <img src="Image/uiux.jpg" alt="UI/UX 3">
+                    <div class="photo-caption active">Designing Seamless Experiences</div>
+                    <div class="photo-caption">Innovative UI/UX Interfaces</div>
+                    <div class="photo-caption">Creative Problem Solving</div>
+                </div>
+                <div class="dessung-description">
+                    <h3>UI/UX Programmer</h3>
+                    <p>
+                        I am currently pursuing my second year in Sherubtse College, specializing in UI/UX design. This journey has been an incredible learning experience, allowing me to explore the principles of user-centered design, develop intuitive and visually appealing digital interfaces, and enhance my creative problem-solving skills. My coursework and projects have strengthened my passion for creating seamless user experiences that combine functionality and aesthetics.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('header nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Image Slideshow
+        const images = document.querySelectorAll('.dessung-frame img');
+        const captions = document.querySelectorAll('.dessung-frame .photo-caption');
+        let currentIndex = 0;
+
+        function changeImage() {
+            images[currentIndex].classList.remove('active');
+            captions[currentIndex].classList.remove('active');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('active');
+            captions[currentIndex].classList.add('active');
+        }
+
+        // Change image and caption every 3 seconds
+        setInterval(changeImage, 3000);
+    </script>
+</body>
+
+</html>

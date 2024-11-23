@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Sports Experience</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #e9e6e6;
+            margin: 0;
+            padding: 0;
+            background-color: #002b36;
+        }
+
+        header {
+            background-color: #004d61;
+            padding: 15px 30px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: #e9e6e6;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ffffff;
+            color: #004d61;
+            border-radius: 5px;
+        }
+
+        .menu-toggle i {
+            font-size: 25px;
+            color: #ffffff;
+            cursor: pointer;
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu-toggle i {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                background-color: #004d61;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                padding: 10px;
+                border-radius: 5px;
+                width: 100%;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                margin: 5px 0;
+                text-align: center;
+            }
+        }
+
+        .sports-item {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #005d79, #007a99);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 40px auto 20px;
+            max-width: 900px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .sports-frame {
+            width: 350px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 4px solid #c9d15c;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+        }
+
+        .sports-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 1s ease;
+        }
+
+        .sports-description {
+            max-width: 500px;
+            text-align: center;
+            color: #f0f0f0;
+            margin: 0 10px;
+        }
+
+        .sports-description h3 {
+            font-size: 1.8em;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .sports-description p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffcc00;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .sports-frame {
+                width: 90%;
+                height: auto;
+                border: 3px solid #c9d15c;
+            }
+
+            .sports-description {
+                max-width: 90%;
+            }
+
+            .sports-description h3 {
+                font-size: 1.5em;
+            }
+
+            .sports-description p {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">Myself</a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Family.html">Family</a>
+            <a href="edu.html">Education</a>
+            <a href="Exp.html">Experience</a>
+            <a href="contact.html">Contact</a>
+            <a href="more.html">More</a>
+        </nav>
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Sports Experience</h2>
+
+            <div class="sports-item">
+                <div class="sports-frame">
+                    <img id="sports-photo" src="Image/football.handshake.jpg" alt="Sports Experience">
+                    <img id="sports-photo" src="Image/final football.jpg" alt="Sports Experience">
+                    <img id="sports-photo" src="Image/ml.jpg" alt="Sports Experience">
+                </div>
+                <div class="sports-description">
+                    <h3>Sports Life</h3>
+                    <p>
+                        My journey in sports taught me discipline, teamwork, and the thrill of competition. Every game
+                        was a challenge, but the joy of winning and the lessons in defeat shaped who I am today.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('header nav');
+        const sportsPhoto = document.getElementById('sports-photo');
+
+        const photos = ["Image/football.handshake.jpg", "Image/final football.jpg", "Image/ml.jpg"]; // Add paths to your sports images
+        let photoIndex = 0;
+
+        function changePhoto() {
+            photoIndex = (photoIndex + 1) % photos.length; // Cycle through photos
+            sportsPhoto.style.opacity = "0"; // Fade out
+            setTimeout(() => {
+                sportsPhoto.src = photos[photoIndex]; // Change photo
+                sportsPhoto.style.opacity = "1"; // Fade in
+            }, 500);
+        }
+
+        // Start cycling photos every 3 seconds
+        setInterval(changePhoto, 3000);
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
